@@ -65,12 +65,44 @@ $ git merge <branch name> [locally merge Feature branch into main branch]
 $ git push -u origin main  [it updated "main" branch with Feature branch changes]
 Branch "Feature" is ahead of "main" branch. So we need to merge into "main" branch 
   
-To delete the branch
+To delete the branch:
 ===================
 After completion of any Feature branch, we need to delete from repo Or may be wrongly created a brach. 
 [Pick the branch from github repo] 
 $ git branch -D <branch name> [To delete the branch in local repo] 
 $ git push origin --delete <branch name> [To delete the branch in remote repo] 
+
+Remove file from git repo :
+=========================
+$ git rm <filename> 
+$ git commit -m "removing the file" 
+$ git push
   
+Rename a file in remote repo:
+=============================
+$ git mv <old name> <new name>  
+$ git commit -m "rename file" 
+$ git push 
   
-  
+Alias: 
+To create the shot cut
+==========================
+$ git config --global alias.c checkout 
+$ git config --global alias.s status
+$ git branch --global alias.b branch
+
+Eg: git branch = git b [shot of branch is b]
+    git status = git s [shot of status]
+    
+ Amend last commit message:
+ To change the last commit message
+ =====================================
+$ git commit --amend -m "Modified msg 1"
+
+Tag: 
+To create a tags
+=========================
+$ git tag <tag name>   [To create the tag in local repo]
+$ git push origin <tag name> [To push the tag into remote repo]
+
+
