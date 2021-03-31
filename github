@@ -105,4 +105,54 @@ To create a tags
 $ git tag <tag name>   [To create the tag in local repo]
 $ git push origin <tag name> [To push the tag into remote repo]
 
+Unstage:
+=============
+modify <file> 
+$ git add <file>.  [it is staged] 
+$ git reset <file> 
+(or)
+$ git restore --staged <file name> 
+$ git clean -n [List all untracked files] 
+$ git clean -f [MAKE sure your actual files are in stage area.] 
+$ git clean -d -f [it cleans untracked diretories]
 
+ 
+How to store unfinish work and continue on other work items. 
+======================================
+$ git stash 
+$ git stash list [To list the all stashed files]
+$ git stash apply [apply to stage but do not delete from stash] 
+$ git stash pop [it pisk from top and also remove it from stash list] 
+$ git stash drop [it picks the latest stash ] 
+$ git stash save  "App5 implment in progress..." 
+$ git stash clear 
+$ git stash list 
+
+
+Log:
+To check the time stamp and all the devloper details commit messages
+=============
+$ git log --oneline 
+$ git log
+
+ Revert:
+ the any changes/undo the changes and form a new commit 
+ ==================================
+$ git revert <commit ID>    
+
+
+ Rest:
+
+ Reset the changes from Local repo to working area
+ =============================================
+  $ git reset HEAD~1
+  $ git reset --mixed HEAD~1 
+  
+Reset the changes from Local Repo to Staging area
+=========================================================
+$ git reset --soft HEAD~1
+
+ Reset the changes from Local Repo and remove the changes entire.
+ =============================================
+Note: Don't use this pretty dangerous 
+ $ git reset --hard HEAD~1 
